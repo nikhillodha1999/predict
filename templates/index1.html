@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            background: url('/static/images/farm4.jpeg') center center no-repeat fixed;
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+
+        }
+        .content {
+            position: inherit;
+            /* top: 50%; */
+            /* left: 50%; */
+            /* z-index: 999; */
+            text-align: center;
+            padding: 60px 32px 10px;
+            margin: 150px;
+            width:-webkit-fill-available;
+            /* transform: translate(-50%, -50%); */
+            background: rgba(56, 55, 55, 0.479);
+            box-shadow: -1px 4px 28px 0px rgba(173, 169, 169, 0.75);
+        }
+
+        .content header {
+            color: white;
+            font-size: 33px;
+            font-weight: 600;
+            margin: 0 0 35px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .field {
+            position: relative;
+            height: 65px;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            background: rgba(255, 255, 255, 0.94);
+        }
+
+        .field span {
+            color: #222;
+            width: 40px;
+            line-height: 45px;
+        }
+
+        .field input {
+            height: 100%;
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #222;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .space {
+            margin-top: 16px;
+        }
+
+        .show {
+            position: absolute;
+            right: 13px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #222;
+            display: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .pass-key:valid~.show {
+            display: block;
+        }
+
+        .pass {
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .pass a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .pass:hover a {
+            text-decoration: underline;
+        }
+
+        .field input[type="submit"] {
+            background: #3498db;
+            border: 1px solid #2691d9;
+            color: white;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .field input[type="submit"]:hover {
+            background: #2691d9;
+        }
+        .card{
+            background-color: rgb(167 173 175);
+            box-shadow: 5px 5px 5px #48454587;
+            display: inline-block;
+        }
+    </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="">
+        <br>
+        <div class="content">
+            <header>Optimizing Agricultural Production</header>
+            <form action="." method="post" name="passInput">
+                <div class="row m-5">
+                <div class="field col mr-4">
+                    <!-- <span class="fa-n"></span> -->
+                    <img src="/static/images/nitrogen.png" alt="" class="mr-5">
+                    <input type="number" required placeholder="Enter nitrogen % in soil" name="nitro">
+                </div>
+                <div class="field col ml-4">
+                    <!-- <span class="fa-light fa-square-n"></span> -->
+                    <img src="/static/images/phosphorus.png" alt="" class="mr-5">
+                    <input type="number" class="pass-key" required placeholder="Enter phosphorus % in soil" name="phos">
+                </div>
+                </div>
+                <div class="row m-5">
+                <div class="field col mr-4">
+                    <!-- <span class="fa fa-lock"></span> -->
+                    <img src="/static/images/potassium.png" alt="" class="mr-5">
+                    <input type="number" class="pass-key" required placeholder="Enter potassium % in soil" name="pota">
+                </div>
+                <div class="field col ml-4">
+                    <!-- <span class="fa fa-lock"></span> -->
+                    <img src="/static/images/temp.png" alt="" class="mr-5">
+                    <input type="number" class="pass-key" required placeholder="Enter tempetature in Celcius" name="temp">
+                </div></div>
+                <div class="row m-5">
+                <div class="field col mr-4">
+                    <!-- <span class="fa fa-lock"></span> -->
+                    <img src="/static/images/humidity.png" alt="" class="mr-5">
+                    <input type="number" class="pass-key" required placeholder="Enter humidity in Environment" name="hum">
+                </div>
+                <div class="field col ml-4">
+                    <!-- <span class="fa fa-lock"></span> -->
+                    <img src="/static/images/ph.png" alt="" class="mr-5">
+                    <input type="number" class="pass-key" required placeholder="Enter pH of soil" name="ph">
+                </div></div>
+                <div class="row m-5">
+                <div class="field col mr-5 ml-5">
+                    <!-- <span class="fa fa-lock"></span> -->
+                    <img src="/static/images/downpour.png" alt="" class="mr-5">
+                    <input type="number" class="pass-key" required placeholder="Enter average rainfall per mm" name="rain">
+                </div></div>
+                <div class="row m-5">
+                <div class="field col">
+                    <input type="submit" value="GET RESULTS">
+                </div>
+                </div>
+            </form>
+        </div>
+        <br>
+        </div>
+    <!-- <img src="/static/images/mango.jpg" alt=""> -->
+    <div class="content bg-light">
+        <h2>You can take following cultivation:</h2>
+        {% for i in res%}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{res[i]}}" alt="crop image">
+            <div class="card-body">
+              <h2 class="card-text">{{i}}</h2>
+            </div>
+          </div>
+        <!-- <img src="{{res[i]}}" alt="" style="height: 300px; border-radius: 25%;" class="m-3"> -->
+        {% endfor %}
+    </div>
+</body>
+
+</html>
